@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+//Primary
+$Cyan: hsl(180, 66%, 49%);
+$Dark-Violet: hsl(257, 27%, 26%);
+$Cyan-light: #9be3e2;
+
+//Secondary
+$Red: hsl(0, 87%, 67%);
+
+//Neutral
+$Gray: hsl(0, 0%, 75%);
+$Grayish-Violet: hsl(257, 7%, 63%);
+$Very-Dark-Blue: hsl(255, 11%, 22%);
+$Very-Dark-Violet: hsl(260, 8%, 14%);
+
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    height: 5rem;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        width: 121px;
+        height: 33px;
+        margin-left: 10%;
+    }
+
+    .menu-items{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: auto;
+        background-color: white;
+        width: 100%;
+        top: 5rem;
+        left: -100%;
+        transition: all 0.5s ease;
+        div{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            a{
+                margin: 2rem;
+                color: $Grayish-Violet;
+                &:hover{
+                    color: $Very-Dark-Violet;
+                }
+            }
+
+            .signUp{
+                background-color: $Cyan;
+                color:white;
+                padding: 1rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                border-radius: 2rem;
+                &:hover{
+                    color: white;
+                    background-color: $Cyan-light;
+                }
+            }
+        }
+    }
+
+    .menu-icon{
+        font-size: 2.5rem;
+        margin-right: 10%;
+        background-color: white; 
+        border: none;
+        color: $Gray; 
+        padding: 12px 16px; 
+        cursor: pointer;
+        outline: none;
+    }
+
+    .active{
+     left: 0%;
+    }
+
+}
+
+.main{
+    height: 44rem;
+    background-color: blue;
+}
+
+.short-link{
+    height: 16rem;
+    background-color: pink;
+}
+
+.statistics{
+    height: 82rem;
+    background-color: yellow;
+}
+
+.boost{
+    height: 18.75rem;
+    background-color: $Dark-Violet;
+    background-image: url('./images/bg-boost-mobile.svg');
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .boostContent{
+        position: absolute;
+        margin-top: 8rem;
+    }
+    #boostLabelDiv{
+        display: flex;
+        justify-content: center;
+    }
+    .boostLabel{
+        color:white;
+        font-size: 1.75rem;
+        font-weight: 525;
+        margin: 0 auto;
+    };
+    #getBoostdivider{
+        display: flex;
+        justify-content: center;
+    }
+    .getBoost{
+        background-color: $Cyan;
+        color:white;
+        padding: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-radius: 2rem;
+        margin-top: 1rem;
+        max-width: 7rem;
+        position: absolute;
+        &:hover{
+            color: white;
+            background-color: $Cyan-light;
+        }
+    }
+}
+
+.footer{
+    height: 48.5rem;
+    background-color: $Very-Dark-Violet;
+    color: #ffffff;
+    font-size: 1.25rem;
+    .footerLogoFilter{
+        filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(100deg) brightness(1000%) contrast(100%);
+    }
+    .container{
+        display: flex; justify-content: center;
+    }
+    .footerContent{
+        margin-top: 3rem;
+        label{
+            font-size: 1.25rem;
+        }
+        .footerLabelTitle{
+            font-weight: 525;
+        }
+    }
+    
+}
+
+@media (max-width:375px){ /* Aplicará a partir desde los 375px hacia atras */
+    .boost{
+        background-image: url('./images/bg-boost-mobile.svg');
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width:376px){ /* Aplicará a partir desde los 376px hacia adelante */
+    .boost{
+        background-image: url('./images/bg-boost-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .footer{
+        .footerContent{
+            position: absolute;
+            margin-top: 2rem;
+        }
+    }
+}
+
+@media (min-width:750px){
+    .navbar{
+        height: 8rem;
+
+        .menu-items{
+            left: 0%;
+            position: relative;
+            height: auto;
+            flex: 1;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 50%;
+            top: 0rem;
+            margin-right: 10%;
+
+            div{
+                margin-left: 3rem;
+                color: $Very-Dark-Violet;
+                flex-direction: row;
+                a{
+                    margin-left: 2rem;
+                }
+            }
+        }
+        .menu-icon{
+            display: none;
+        }
+    }
+
+    .container{
+        width: 80%;
+        margin: auto;
+        .short-link{
+            height: 14rem;
+
+        }
+        .statistics{
+            height: 45rem;
+        }
+    }
+
+    .main{
+        height: 34.5rem;
+    }
+
+    .boost{
+        height: 15.625rem;
+        .boostContent{
+            position: absolute;
+        }
+    }
+
+    .footer{
+        height: 19.375rem;
+    }
+}
