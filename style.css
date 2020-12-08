@@ -13,6 +13,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: 1.5rem;
+  color: #9e9aa7;
+}
+
 .navbar {
   height: 5rem;
   background-color: white;
@@ -58,6 +63,9 @@ a {
   padding: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border: #2acfcf;
   border-radius: 2rem;
 }
 .navbar .menu-items div .signUp:hover {
@@ -69,7 +77,7 @@ a {
   margin-right: 10%;
   background-color: white;
   border: none;
-  color: #bfbfbf;
+  color: #f0f1f6;
   padding: 12px 16px;
   cursor: pointer;
   outline: none;
@@ -79,28 +87,269 @@ a {
 }
 
 .main {
-  height: 44rem;
-  background-color: blue;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.main :nth-child(1) {
+  overflow: hidden;
+}
+.main :nth-child(1) img {
+  width: 120%;
+  height: auto;
+  object-position: 2rem 0%;
+}
+.main :nth-child(2) {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main :nth-child(2) h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.main :nth-child(2) p {
+  padding: 2rem;
+  text-align: center;
+}
+.main :nth-child(2) button {
+  background-color: #2acfcf;
+  color: white;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border: #2acfcf;
+  border-radius: 2rem;
+  width: 15rem;
+}
+.main :nth-child(2) button:hover {
+  color: white;
+  background-color: #9be3e2;
+}
+
+.wrapper {
+  padding: 2rem;
+  background: linear-gradient(0deg, #f0f1f6 50%, #ffffff 50%);
 }
 
 .short-link {
   height: 16rem;
-  background-color: pink;
+  background-color: #35323e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background-image: url("./images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 30rem 13rem;
+  background-position: top right;
+  border-radius: 1rem;
+}
+.short-link .input-group {
+  display: flex;
+  flex-direction: column;
+}
+.short-link .input-group input {
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+.short-link .input-group small {
+  display: none;
+}
+.short-link .input-error input {
+  border: #f46262 0.2rem solid;
+}
+.short-link .input-error small {
+  color: #f46262;
+  display: block;
+}
+.short-link button {
+  border-radius: 0.5rem;
+  background-color: #2acfcf;
+  color: white;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border: #2acfcf;
+}
+.short-link button:hover {
+  color: white;
+  background-color: #9be3e2;
+}
+
+.container .wrapper, .container .link-card, .container .statistics {
+  background-color: #f0f1f6;
+}
+
+.list-links > :nth-child(1) {
+  padding-top: 2rem;
+}
+
+.link-card {
+  padding: 2rem;
+  padding-top: 0rem;
+}
+.link-card .original-link, .link-card .shortened-link {
+  background-color: #ffffff;
+  padding: 1rem;
+}
+.link-card .original-link p, .link-card .shortened-link p {
+  color: #35323e;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin: 0;
+}
+.link-card .original-link {
+  margin-bottom: 0.2rem;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+.link-card .shortened-link {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+}
+.link-card .shortened-link p {
+  margin-bottom: 1rem;
+  color: #2acfcf;
+}
+.link-card .shortened-link .copy {
+  background-color: #2acfcf;
+  color: white;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border: #2acfcf;
+  height: 2.5rem;
+  padding: 0rem;
+}
+.link-card .shortened-link .copy:hover {
+  color: white;
+  background-color: #9be3e2;
+}
+.link-card .shortened-link .copied {
+  background-color: #35323e;
 }
 
 .statistics {
-  height: 82rem;
-  background-color: yellow;
+  height: auto;
+  padding: 3rem;
+  text-align: center;
+}
+.statistics p {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+.statistics .wrapper-cards {
+  background: linear-gradient(90deg, #f0f1f6 48%, #2acfcf 48%, #2acfcf 52%, #f0f1f6 48%);
+}
+.statistics .card {
+  background-color: #ffffff;
+  padding: 0rem 2rem 2rem 2rem;
+  margin-top: 5rem;
+}
+.statistics .card .image {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #35323e;
+  padding: 1.5rem;
+  border-radius: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  transform: translateY(-2.5rem);
+}
+.statistics .card p {
+  font-size: 1rem;
 }
 
-.started {
+.boost {
   height: 18.75rem;
-  background-color: green;
+  background-color: #3b3054;
+  background-image: url("./images/bg-boost-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.boost .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boost .boostContent {
+  position: absolute;
+  margin-top: 8rem;
+}
+.boost #boostLabelDiv {
+  display: flex;
+  justify-content: center;
+}
+.boost .boostLabel {
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 525;
+  margin: 0 auto;
+}
+.boost #getBoostdivider {
+  display: flex;
+  justify-content: center;
+}
+.boost .getBoost {
+  background-color: #2acfcf;
+  color: white;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  max-width: 7rem;
+  position: absolute;
+}
+.boost .getBoost:hover {
+  color: white;
+  background-color: #9be3e2;
 }
 
 .footer {
-  height: 48.5rem;
-  background-color: gray;
+  height: auto;
+  background-color: #232127;
+  color: #ffffff;
+  font-size: 1.25rem;
+  padding: 2rem;
+}
+.footer .imgFooterContent {
+  height: 1.5rem;
+}
+.footer .imgFooterContent .footerLogoFilter {
+  filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(100deg) brightness(1000%) contrast(100%);
+}
+.footer .imgFooterContent, .footer .featuresFooter, .footer .resourcesFooter, .footer .companyFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.footer .imgFooterContent label, .footer .featuresFooter label, .footer .resourcesFooter label, .footer .companyFooter label {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.footer .imgFooterContent h1, .footer .featuresFooter h1, .footer .resourcesFooter h1, .footer .companyFooter h1 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.footer .socialNetworksFooter {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 2rem;
 }
 
 @media (min-width: 750px) {
@@ -131,26 +380,78 @@ a {
   }
 
   .container {
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
   .container .short-link {
     height: 14rem;
   }
   .container .statistics {
-    height: 45rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .statistics p {
+    width: 35rem;
+  }
+  .container .statistics .wrapper-cards {
+    display: flex;
+    width: 80%;
+    height: 40rem;
+    background: linear-gradient(0deg, #f0f1f6 49%, #2acfcf 49%, #2acfcf 51%, #f0f1f6 41%);
+    align-items: center;
+  }
+  .container .statistics .wrapper-cards .card {
+    margin: 0rem;
+    height: auto;
+  }
+  .container .statistics .wrapper-cards .card p, .container .statistics .wrapper-cards .card h2 {
+    text-align: left;
+  }
+  .container .statistics .wrapper-cards .card p {
+    margin-top: 1rem;
+    width: auto;
+  }
+  .container .statistics .wrapper-cards .card .image {
+    margin: 0;
+  }
+  .container .statistics .wrapper-cards > :nth-child(1) {
+    transform: translateY(-5rem);
+  }
+  .container .statistics .wrapper-cards > :nth-child(2) {
+    margin: 2rem;
+  }
+  .container .statistics .wrapper-cards > :nth-child(3) {
+    transform: translateY(5rem);
   }
 
   .main {
     height: 34.5rem;
   }
 
-  .started {
+  .boost {
     height: 15.625rem;
+    background-image: url("./images/bg-boost-desktop.svg");
+  }
+  .boost .boostContent {
+    position: absolute;
   }
 
-  .footer {
-    height: 19.375rem;
+  .footer .imgFooterContent {
+    margin-right: 5rem;
+  }
+  .footer .footerContent {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer .footerContent .socialNetworksFooter {
+    width: 10rem;
+    justify-content: space-around;
+    margin: 2rem 0rem 0rem 0rem;
   }
 }
 

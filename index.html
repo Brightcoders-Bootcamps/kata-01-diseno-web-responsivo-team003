@@ -1,104 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-    crossorigin="anonymous" />
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+    <link rel="stylesheet" href="./style.css" />
 
-  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-  <link rel="stylesheet" href="./style.css" />
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
-</head>
-
-<body>
-  <nav class="navbar">
-    <img src="./images/logo.svg" alt="" />
-    <div class="menu-items" id="items">
-      <div>
-        <a href="">Features</a>
-        <a href=""> Pricing </a>
-        <a href="">Resources </a>
-      </div>
-      <div>
-        <a href="">Login</a>
-        <a class="signUp" href="">Sign Up</a>
-      </div>
-    </div>
-    <button class="menu-icon fas fa-bars" id="menu"></button>
-  </nav>
-  <main class="main container">
-    <!-- Aquí va segunda seccion información e imagen-->
-    More than just shorter links Build your brand’s recognition and get
-    detailed insights on how your links are performing. Get Started
-  </main>
-  <div class="container">
-    <div class="short-link">
-      <!-- Aquí va tercera seccion formulario de shoten it-->
-      <div class="inputLink">
-        <input type="text" id="linkToShort">
-      </div>
-      <div id="shortenit">
-        <a class="shortenItButton" onclick="shorthLink(document.getElementById('linkToShort').value)">Shorten It!</a>
-        <div id="addLinkdivider">
-          <label id="addLinkMsg" hidden>Please add a link</label>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="./images/logo.svg" alt="" />
+      <div class="menu-items" id="items">
+        <div>
+          <a href="">Features</a>
+          <a href=""> Pricing </a>
+          <a href="">Resources </a>
+        </div>
+        <div>
+          <a href="">Login</a>
+          <a class="signUp" href="">Sign Up</a>
         </div>
       </div>
-      <div class="linksShorted">
-        <div id="listedLinks"></div>
+      <button class="menu-icon fas fa-bars" id="menu"></button>
+    </nav>
+    <main class="main container">
+      <!-- Aquí va segunda seccion información e imagen-->
+      <div>
+        <img src="./images/illustration-working.svg" alt="" />
       </div>
-      <!-- Aquí va cuarta seccion listado de links-->
-    </div>
-    <div class="statistics">
-      <!-- Aquí va quinta seccion estadisticas avanzadas-->
-      Advanced Statistics Track how your links are performing across the web
-      with our advanced statistics dashboard.
-
-      <!-- Aquí va sexta seccion cards-->
-      <!-- card 1-->
-      Brand Recognition Boost your brand recognition with each click. Generic
-      links don’t mean a thing. Branded links help instil confidence in your
-      content.
-      <!-- card 2-->
-      Detailed Records Gain insights into who is clicking your links. Knowing
-      when and where people engage with your content helps inform better
-      decisions.
-      <!-- card 3-->
-      Fully Customizable Improve brand awareness and content discoverability
-      through customizable links, supercharging audience engagement.
-    </div>
-  </div>
-
-  <div class="boost">
-    <!-- Aquí va septima seccion-->
+      <div>
+        <h1>More than just shorter links</h1>
+        <p>
+          Build your brand’s recognition and get detailed insights on how your
+          links are performing.
+        </p>
+        <button class="getStarted">Get Started</button>
+      </div>
+    </main>
     <div class="container">
-      <div class="boostContent">
-        <div id="boostLabelDiv">
-          <label for="boost" class="boostLabel">Boost your links today</label>
+      <!-- Aquí va cuarta seccion listado de links-->
+      <div class="wrapper">
+        <div class="short-link">
+          <!-- Aquí va tercera seccion formulario de shoten it-->
+          <div class="input-group" id="input">
+            <input type="text" id="linkToShort" />
+            <small id="addLinkMsg">please add a link</small>
+          </div>
+          <button
+            class="shortenIt shortenItButton"
+            onclick="shorthLink(document.getElementById('linkToShort').value)"
+          >
+            Shorten It!
+          </button>
         </div>
-        <div id="getBoostdivider">
-          <a class="getBoost" href="#">Get Started</a>
+      </div>
+
+      <div class="list-links" id="listedLinks">
+
+        <!-- <div class="link-card">
+          <div class="original-link">
+            <p>http://127.0.0.1:5500/index.html</p>
+          </div>
+          <div class="shortened-link">
+            <p>http://127.0.0.1:5500/index.html</p>
+            <button class="copy">Copy</button>
+          </div>
+        </div>
+
+        <div class="link-card">
+          <div class="original-link">
+            <p>http://127.0.0.1:5500/index.html</p>
+          </div>
+          <div class="shortened-link">
+            <p>http://127.0.0.1:5500/index.html</p>
+            <button class="copy copied">Copy</button>
+          </div>
+        </div>
+
+        <div class="link-card">
+          <div class="original-link">
+            <p>http://127.0.0.1:5500/index.html</p>
+          </div>
+          <div class="shortened-link">
+            <p>http://127.0.0.1:5500/index.html</p>
+            <button class="copy">Copy</button>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="statistics">
+        <!-- Aquí va quinta seccion estadisticas avanzadas-->
+        <h1>Advanced Statistics</h1>
+
+        <p>
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </p>
+
+        <!-- Aquí va sexta seccion cards-->
+        <!-- card 1-->
+        <div class="wrapper-cards">
+          <div class="card">
+            <div class="image">
+              <img src="./images/icon-brand-recognition.svg" alt="" />
+            </div>
+            <h2>Brand Recognition</h2>
+            <p>
+              Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+          </div>
+          <!-- card 2-->
+          <div class="card">
+            <div class="image">
+              <img src="./images/icon-detailed-records.svg" alt="" />
+            </div>
+            <h2>Detailed Records</h2>
+            <p>
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </div>
+          <!-- card 3-->
+
+          <div class="card">
+            <div class="image">
+              <img src="./images/icon-fully-customizable.svg" alt="" />
+            </div>
+            <h2>Fully Customizable</h2>
+            <p>
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <footer class="footer">
+
+    <div class="boost">
+      <!-- Aquí va septima seccion-->
+      <div class="container"> 
+        <div class="boostContent"> 
+          <div id="boostLabelDiv"> 
+            <label for="boost" class="boostLabel">
+              Boost your links today
+            </label> 
+          </div> 
+          <div id="getBoostdivider"> 
+            <a class="getBoost" href="#">
+              Get Started
+            </a> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+<footer class="footer">
     <!-- Aquí va sexta seccion footer-->
     <div class="container">
       <div class="footerContent">
@@ -106,20 +189,20 @@
           <img src="./images/logo.svg" alt="" class="footerLogoFilter" />
         </div>
         <div class="featuresFooter">
-          <label for="Features" class="footerLabelTitle">Features</label>
+          <h1 for="Features" class="footerLabelTitle">Features</h1>
           <label for="LinkShortening">Link Shortening</label>
           <label for="BrandedLinks">Branded Links</label>
           <label for="Analytics">Analytics</label>
         </div>
         <div class="resourcesFooter">
-          <label for="Resources" class="footerLabelTitle">Resources</label>
+          <h1 for="Resources" class="footerLabelTitle">Resources</h1>
           <label for="Blog">Blog</label>
           <label for="Developers">Developers</label>
           <label for="Support">Support</label>
         </div>
 
         <div class="companyFooter">
-          <label for="Company" class="footerLabelTitle">Company</label>
+          <h1 for="Company" class="footerLabelTitle">Company</h1>
           <label for="About">About</label>
           <label for="Our Team">Our Team</label>
           <label for="Careers">Careers</label>
@@ -135,12 +218,13 @@
       </div>
     </div>
   </footer>
-  <div class="attribution">
-    Challenge by
-    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Team
-      003</a>.
-  </div>
-  
-</body>
-  <script src="./javascript.js"></script>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script type="text/javascript" src="./javascript.js"></script>
+  </body>
 </html>
