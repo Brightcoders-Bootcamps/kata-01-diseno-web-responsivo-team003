@@ -17,30 +17,27 @@ margin:auto;
 	  display: none;
   }
   .topnav a {
-	
 	margin: auto;
 	float: left;
 	display: block;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	
-
   }
   .active{
 	  font-size:40px;
 	  color:black;
 	  font-family: 'Poppins', sans-serif;
-	  
-
   }
   .text-color{
+	font-size: 15px;
 	font-weight: bold;
 	  color:rgb(112, 112, 112);
 	  position: relative;
 	  top:20px;
   }
   .text-color:hover{
+	  font-size: 15px;
 	font-weight: bold;
 	  color:#000;
 	  transition-duration: 1s;
@@ -49,15 +46,21 @@ margin:auto;
   }
   .topnav .button-right{
 	float: right;
-	
   }
-
-  
   .button-right .button-sing{
 	font-weight: bold;
 	  position: relative;
 	  top:27px;
 	  background:#09d2d2;
+	  padding: 9px 20px;
+	  color: #fff;
+	  border-radius: 30px;
+  }
+  .button-right .button-sing:hover{
+	font-weight: bold;
+	  position: relative;
+	  top:27px;
+	  background:#09d2d2be;
 	  padding: 9px 20px;
 	  color: #fff;
 	  border-radius: 30px;
@@ -101,7 +104,6 @@ margin:auto;
 	  float: none;
 	  display: block;
 	}
-
 	.topnav.responsive .active  {
 		float: none;
 		display: block;
@@ -110,20 +112,17 @@ margin:auto;
 	.button-responsive{
 		position: relative;
 		background:#432d54;
-		
 		border-radius:10px;
 		color:#fff;
 		margin-top:20px;
 	}
 	.button-responsive hr{
 		color:#766381;
-		
 		position: relative;
 		top: 20px;
 		display:block;
 	}
 	.button-responsive a{
-
 		margin-top:20px;
 		color:#fff;
 		margin:10px ;
@@ -142,6 +141,14 @@ margin:auto;
 		position: relative;
 		top: 5px;
 		background:#09d2d2;
+		padding: 12px 15px;
+		margin: 29px;
+		border-radius: 30px;
+	}
+	.button-right .button-sing:hover {
+		position: relative;
+		top: 5px;
+		background:#09d2d2be;
 		padding: 12px 15px;
 		margin: 29px;
 		border-radius: 30px;
