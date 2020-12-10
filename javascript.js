@@ -42,7 +42,7 @@ function shorthLink(link) {
     Copy 
     </button> </div>`;
 
-    parent_div.parentNode.insertBefore(div, parent_div);
+    parent_div.appendChild(div, parent_div);
   };
   getUrl();
 }

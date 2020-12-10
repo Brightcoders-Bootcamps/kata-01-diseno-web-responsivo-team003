@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <script src="menu.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+      </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
       rel="icon"
       type="image/png"
@@ -33,21 +37,24 @@
     </style>
   </head>
   <body>
-    <nav class="navbar">
-      <img src="./images/logo.svg" alt="" />
-      <div class="menu-items" id="items">
-        <div>
-          <a href="">Features</a>
-          <a href=""> Pricing </a>
-          <a href="">Resources </a>
-        </div>
-        <div>
-          <a href="">Login</a>
-          <a class="signUp" href="">Sign Up</a>
-        </div>
-      </div>
-      <button class="menu-icon fas fa-bars" id="menu"></button>
-    </nav>
+    <div class="container-nav">
+      <div class="topnav" id="myTopnav">
+          <a href="" class="short-logo">Shortly</a>
+          <div style class="button-responsive">
+              <a disabled ></a>
+              <a href="" class="text-color">Features</a>
+              <a href="" class="text-color" >Pricing
+              <a href=""class="text-color" >Resoucces<hr></a>
+              <div class="button-right">
+                  <a href="" class="text-color">Login</a>
+                  <a href="" class="button-sing" >Sing Up</a>
+                  <a style="position: absolute;" href=""></a>  
+                  <a disabled ></a>
+              </div>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+    </div>
+</div>
     <main class="main container">
       <!-- Aquí va segunda seccion información e imagen-->
       <div>
@@ -110,8 +117,8 @@
             <p>http://127.0.0.1:5500/index.html</p>
             <button class="copy">Copy</button>
           </div>
-        </div>
-      </div> -->
+        </div> -->
+      </div>
 
       <div class="statistics">
         <!-- Aquí va quinta seccion estadisticas avanzadas-->
@@ -166,19 +173,19 @@
 
     <div class="boost">
       <!-- Aquí va septima seccion-->
-      <div class="container"> 
-        <div class="boostContent"> 
-          <div id="boostLabelDiv"> 
+      <div class="container">
+        <div class="boostContent">
+          <div id="boostLabelDiv">
             <label for="boost" class="boostLabel">
               Boost your links today
-            </label> 
-          </div> 
-          <div id="getBoostdivider"> 
+            </label>
+          </div>
+          <div id="getBoostdivider">
             <a class="getBoost" href="#">
               Get Started
-            </a> 
-          </div> 
-        </div> 
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 <footer class="footer">
