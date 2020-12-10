@@ -197,7 +197,10 @@ hr {
   background-color: #9be3e2;
 }
 
-.container .wrapper, .container .link-card, .container .statistics, .container .list-links {
+.container .wrapper,
+.container .link-card,
+.container .statistics,
+.container .list-links {
   background-color: #f0f1f6;
 }
 
@@ -209,11 +212,13 @@ hr {
   padding: 2rem;
   padding-top: 0rem;
 }
-.link-card .original-link, .link-card .shortened-link {
+.link-card .original-link,
+.link-card .shortened-link {
   background-color: #ffffff;
   padding: 1rem;
 }
-.link-card .original-link p, .link-card .shortened-link p {
+.link-card .original-link p,
+.link-card .shortened-link p {
   color: #35323e;
   margin-bottom: 1rem;
   font-size: 1rem;
@@ -262,7 +267,13 @@ hr {
   margin-top: 2rem;
 }
 .statistics .wrapper-cards {
-  background: linear-gradient(90deg, #f0f1f6 48%, #2acfcf 48%, #2acfcf 52%, #f0f1f6 48%);
+  background: linear-gradient(
+    90deg,
+    #f0f1f6 48%,
+    #2acfcf 48%,
+    #2acfcf 52%,
+    #f0f1f6 48%
+  );
 }
 .statistics .card {
   background-color: #ffffff;
@@ -342,20 +353,30 @@ hr {
   height: 1.5rem;
 }
 .footer .imgFooterContent .footerLogoFilter {
-  filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(100deg) brightness(1000%) contrast(100%);
+  filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(100deg)
+    brightness(1000%) contrast(100%);
 }
-.footer .imgFooterContent, .footer .featuresFooter, .footer .resourcesFooter, .footer .companyFooter {
+.footer .imgFooterContent,
+.footer .featuresFooter,
+.footer .resourcesFooter,
+.footer .companyFooter {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
 }
-.footer .imgFooterContent label, .footer .featuresFooter label, .footer .resourcesFooter label, .footer .companyFooter label {
+.footer .imgFooterContent label,
+.footer .featuresFooter label,
+.footer .resourcesFooter label,
+.footer .companyFooter label {
   margin-top: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
 }
-.footer .imgFooterContent h1, .footer .featuresFooter h1, .footer .resourcesFooter h1, .footer .companyFooter h1 {
+.footer .imgFooterContent h1,
+.footer .featuresFooter h1,
+.footer .resourcesFooter h1,
+.footer .companyFooter h1 {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
@@ -554,14 +575,21 @@ hr {
     display: flex;
     width: 80%;
     height: 40rem;
-    background: linear-gradient(0deg, #f0f1f6 49%, #2acfcf 49%, #2acfcf 51%, #f0f1f6 41%);
+    background: linear-gradient(
+      0deg,
+      #f0f1f6 49%,
+      #2acfcf 49%,
+      #2acfcf 51%,
+      #f0f1f6 41%
+    );
     align-items: center;
   }
   .container .statistics .wrapper-cards .card {
     margin: 0rem;
     height: auto;
   }
-  .container .statistics .wrapper-cards .card p, .container .statistics .wrapper-cards .card h2 {
+  .container .statistics .wrapper-cards .card p,
+  .container .statistics .wrapper-cards .card h2 {
     text-align: left;
   }
   .container .statistics .wrapper-cards .card p {
@@ -583,23 +611,26 @@ hr {
 
   .main {
     height: 34.5rem;
-<<<<<<< HEAD
-  }
-=======
     width: 80%;
-    flex-direction: row; }
-    .main > :nth-child(1) {
-      order: 2; }
-    .main > :nth-child(2) {
-      order: 1; }
-      .main > :nth-child(2) p {
-        padding-left: 0px;
-        margin-left: 0px; }
-      .main > :nth-child(2) p, .main > :nth-child(2) h1 {
-        text-align: left; }
-      .main > :nth-child(2) button {
-        align-self: flex-start; }
->>>>>>> master
+    flex-direction: row;
+  }
+  .main > :nth-child(1) {
+    order: 2;
+  }
+  .main > :nth-child(2) {
+    order: 1;
+  }
+  .main > :nth-child(2) p {
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+  .main > :nth-child(2) p,
+  .main > :nth-child(2) h1 {
+    text-align: left;
+  }
+  .main > :nth-child(2) button {
+    align-self: flex-start;
+  }
 
   .boost {
     height: 15.625rem;
