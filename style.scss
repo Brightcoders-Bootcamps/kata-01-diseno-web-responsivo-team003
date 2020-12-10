@@ -156,19 +156,19 @@ p{
             font-size: 3rem;
             text-align: center;
         }
-    
+
         p{
             padding:2rem;
             text-align: center;
         }
-    
+
         button{
             @include button;
             @include rounded-button;
             width: 15rem;
         }
     }
-    
+
 }
 
 .wrapper{
@@ -188,7 +188,7 @@ p{
     background-size: 30rem 13rem;
     background-position: top right;
     border-radius: 1rem;
-    
+
 
     .input-group{
         display: flex;
@@ -211,7 +211,7 @@ p{
             display: block;
         }
     }
-    
+
 
     button{
         @include sharp-button;
@@ -249,7 +249,7 @@ p{
     .original-link{
         margin-bottom: .2rem;
         border-radius: .5rem .5rem 0rem 0rem;
-        
+
     }
 
     .shortened-link{
@@ -573,7 +573,7 @@ p{
                 }
             }
         }
-        
+
         .statistics{
             height: auto;
             display: flex;
@@ -606,7 +606,7 @@ p{
                         margin: 0;
                     }
                 }
-                
+
                 >:nth-child(1){
                    transform: translateY(-5rem);
                 }
@@ -615,7 +615,7 @@ p{
                     margin: 2rem;
                 }
 
-                
+
                 >:nth-child(3){
                     transform: translateY(5rem);
                 }
@@ -626,8 +626,32 @@ p{
 
     .main{
         height: 34.5rem;
+        width: 80%;
+        flex-direction: row;
+
+        >:nth-child(1){
+          order: 2;
+        }
+
+        >:nth-child(2){
+          order: 1;
+          // width: 55%
+
+          p {
+            padding-left: 0px;
+            margin-left: 0px;
+          }
+
+          p, h1 {
+            text-align: left;
+          }
+
+          button {
+            align-self: flex-start;
+          }
+        }
     }
-    
+
     .boost{
         height: 15.625rem;
         background-image: url("./images/bg-boost-desktop.svg");

@@ -583,7 +583,23 @@ hr {
 
   .main {
     height: 34.5rem;
+<<<<<<< HEAD
   }
+=======
+    width: 80%;
+    flex-direction: row; }
+    .main > :nth-child(1) {
+      order: 2; }
+    .main > :nth-child(2) {
+      order: 1; }
+      .main > :nth-child(2) p {
+        padding-left: 0px;
+        margin-left: 0px; }
+      .main > :nth-child(2) p, .main > :nth-child(2) h1 {
+        text-align: left; }
+      .main > :nth-child(2) button {
+        align-self: flex-start; }
+>>>>>>> master
 
   .boost {
     height: 15.625rem;
