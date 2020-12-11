@@ -1,9 +1,11 @@
-var menu = document.getElementById("menu");
-var menuItems = document.getElementById("items");
+// var menu = document.getElementById("menu");
+// var menuItems = document.getElementById("items");
 
-menu.addEventListener("click", () => {
-  menuItems.classList.toggle("active");
-});
+// console.log(menu);
+
+// menu.addEventListener("click", () => {
+//   menuItems.classList.toggle("active");
+// });
 
 function shorthLink(link) {
   if (link.length <= 0) {
@@ -25,12 +27,15 @@ function shorthLink(link) {
         );
       })
     ).json();
-    if (url_shorted.code && url_shorted.code === 400) return;
+    if (url_shorted.code && url_shorted.code === 400){
+      alert("An error has been ocurred");
+      return false;
+    }
 
     var short_link = url_shorted["result"]["short_link"];
     var parent_div = document.getElementById("listedLinks");
     var div = document.createElement("div");
-
+    document.getElementById("linkToShort").value = "";
     div.classList.add("link-card");
     div.innerHTML = ` 
     <div class="original-link"> 

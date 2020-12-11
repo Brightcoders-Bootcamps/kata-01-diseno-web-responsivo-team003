@@ -95,7 +95,7 @@ p{
       }
       .text-color:hover{
         font-size: 15px;
-      font-weight: bold;
+        font-weight: bold;
         color:#35323e;
         transition-duration: 1s;
         position: relative;
@@ -196,6 +196,9 @@ p{
         input{
             height: 3rem;
             @include sharp-button;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            padding-left: 2rem;
         }
         small{
             display: none;
@@ -205,6 +208,7 @@ p{
     .input-error{
         input{
             border: $Red .2rem solid;
+            height: 3rem;
         }
         small{
             color: $Red;
@@ -249,7 +253,6 @@ p{
     .original-link{
         margin-bottom: .2rem;
         border-radius: .5rem .5rem 0rem 0rem;
-
     }
 
     .shortened-link{
@@ -399,14 +402,6 @@ p{
 
 }
 
-// @media (max-width:375px){ /* Aplicará a partir desde los 375px hacia atras */
-//     .boost{
-//         background-image: url('./images/bg-boost-mobile.svg');
-//         background-repeat: no-repeat;
-//     }
-// }
-
-
 @media (min-width:915px){
     .footer{
         .imgFooterContent{
@@ -528,6 +523,7 @@ p{
             align-items: center;
             background-image: url("./images/bg-shorten-desktop.svg");
             background-size: 100% 100%;
+            height: 6rem;
             .input-group{
                 width: 70%;
                 height: 3.6rem;
@@ -553,6 +549,7 @@ p{
                     border-radius: 0rem;
                     display: flex;
                     align-items: center;
+                    border-radius: .5rem 0rem 0rem .5rem;
                 }
 
                 .shortened-link{
@@ -563,6 +560,7 @@ p{
                     border-radius: 0rem;
                     justify-content: space-around;
                     align-items: center;
+                    border-radius: 0rem .5rem .5rem 0rem;
                     button{
                         width: 10rem;
                         border-radius: .5rem;
