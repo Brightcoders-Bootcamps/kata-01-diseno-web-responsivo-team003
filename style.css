@@ -17,12 +17,17 @@ p {
   font-size: 1.5rem;
   color: #9e9aa7;
 }
+.main, .statistics h1,h2{
+  color:#35323e;
+}
 
 .container-nav {
-  width: 90%;
+  width: 84%;
   max-width: 92%;
   height: auto;
   margin: auto;
+  height: 200px;
+
 }
 
 .topnav {
@@ -100,6 +105,7 @@ hr {
   right: 0;
   top: 0px;
 }
+
 
 .main {
   height: auto;
@@ -283,7 +289,7 @@ hr {
 .statistics .card .image {
   width: 2.5rem;
   height: 2.5rem;
-  background-color: #35323e;
+  background-color: #432d54;
   padding: 1.5rem;
   border-radius: 4rem;
   display: flex;
@@ -348,6 +354,11 @@ hr {
   color: #ffffff;
   font-size: 1.25rem;
   padding: 2rem;
+}
+.footer label:hover{
+ 
+  color:#2acfcf;
+ 
 }
 .footer .imgFooterContent {
   height: 1.5rem;
@@ -512,6 +523,13 @@ hr {
     width: 100%;
     margin: auto;
   }
+  .container-img{
+    position: relative;
+    top:0px;
+    left:100px;
+    width:900px;
+    height: 1000px;
+  }
   .container .short-link {
     width: 80%;
     margin: auto;
@@ -638,6 +656,15 @@ hr {
   }
   .boost .boostContent {
     position: absolute;
+  }
+}
+@media (min-width: 1100px) {
+  .container-img{
+    position: relative;
+    top:0px;
+    left:135px;
+    width:1000px;
+    height: 1000px;
   }
 }
 
